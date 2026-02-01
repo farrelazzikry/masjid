@@ -818,16 +818,6 @@ footer {
     }
 }
 
-/* ========== MOBILE MENU ========== */
-.mobile-menu-btn {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--primary);
-    background: none;
-    border: none;
-}
-
 /* ========== COPY NOTIFICATION ========== */
 .copy-notification {
     position: absolute;
@@ -865,12 +855,30 @@ footer {
     bottom: -35px;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/* ========== MOBILE MENU ========== */
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary);
+    background: none;
+    border: none;
+    padding: 10px;
+    z-index: 1001;
+    position: relative;
+}
+
+/* RESPONSIVE DESIGN - MOBILE */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 15px 5%;
+
+    /* HAMBURGER BUTTON */
+    .mobile-menu-btn {
+        display: block !important;
+        position: relative;
+        z-index: 1001;
     }
 
+    /* HIDE DEFAULT NAV */
     .nav-links {
         position: fixed;
         top: 0;
@@ -883,20 +891,55 @@ footer {
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
         transition: right 0.3s ease;
         z-index: 1000;
+        display: flex !important;
+        /* PASTIKAN FLEX */
     }
 
+    /* SHOW MENU WHEN ACTIVE */
     .nav-links.active {
         right: 0;
     }
 
-    .mobile-menu-btn {
-        display: block;
+    /* STYLING NAV LINKS IN MOBILE */
+    .nav-links li {
+        margin: 15px 0;
+        width: 100%;
     }
 
+    .nav-links a {
+        display: block;
+        padding: 15px;
+        border-radius: 8px;
+        transition: background 0.3s;
+        font-size: 1.1rem;
+    }
+
+    .nav-links a:hover {
+        background: #f0f9ff;
+    }
+
+    /* OVERLAY BACKGROUND */
+    .nav-links.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    /* HERO ADJUSTMENTS */
     .page-hero .hero-content h1 {
         font-size: 2.5rem;
     }
 
+    /* SECTION PADDING */
     .section {
         padding: 80px 0 60px !important;
     }
@@ -905,17 +948,19 @@ footer {
         padding-top: 80px;
     }
 
+    /* CONTACT GRID */
     .contact-grid {
         grid-template-columns: 1fr;
-        /* Satu kolom di mobile */
         gap: 25px;
     }
 
+    /* DONATION GRID */
     .donation-grid {
         grid-template-columns: 1fr;
         gap: 25px;
     }
 
+    /* MODAL */
     .modal-content {
         margin: 20px;
         padding: 25px 20px;
@@ -926,9 +971,9 @@ footer {
         height: 180px;
     }
 
+    /* SECTION TITLE */
     .section-title h2 {
         font-size: 2rem;
-        /* Sedikit lebih kecil di mobile */
         margin-bottom: 20px;
     }
 
@@ -937,24 +982,21 @@ footer {
         margin-top: -5px;
     }
 
+    /* FOOTER */
     .footer-content {
         grid-template-columns: 1fr;
-        /* Satu kolom di mobile */
         gap: 30px;
         text-align: center;
-        /* Center di mobile */
     }
 
     .footer-contact,
     .footer-links,
     .footer-info {
         text-align: center;
-        /* Center semua di mobile */
     }
 
     .footer-contact p {
         justify-content: center;
-        /* Center icon dan text di mobile */
     }
 }
 
