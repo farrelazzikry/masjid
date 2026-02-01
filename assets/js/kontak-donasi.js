@@ -243,3 +243,40 @@ document.addEventListener('DOMContentLoaded', function () {
     initFadeAnimations();
     initRippleEffects();
 });
+// Di dalam fungsi initQRModal, tambahkan penanganan untuk semua tombol qr-btn
+function initQRModal() {
+    const modal = document.getElementById('qrModal');
+    const qrBtns = document.querySelectorAll('.qr-btn');
+    const closeModal = document.querySelector('.close-modal');
+
+    if (!modal || qrBtns.length === 0) return;
+
+    qrBtns.forEach(qrBtn => {
+        qrBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    if (closeModal) {
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
