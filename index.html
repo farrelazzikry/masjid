@@ -4,102 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masjid Al-Ikhlas</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Masjid Al-Muslimin - Beranda</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="logo">MASJID <span>AL-MUSLIMIN</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="kontak-donasi.html">Kontak & Donasi</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
 
-    <header class="hero">
-        <div class="overlay">
-            <h1>Masjid Al-Muslimin Perumahan Oriana</h1>
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <span class="sub-title">Selamat Datang di Portal Resmi</span>
+            <h1>Masjid Al-Muslimin</h1>
+            <p>Perumahan Oriana - Menjalin Ukhuwah, Menggapai Ridho Allah</p>
+            <div class="hero-buttons">
+                <a href="#jadwal" class="btn-primary">
+                    <i class="fas fa-clock"></i> Lihat Jadwal Sholat
+                </a>
+                <a href="kontak-donasi.html" class="btn-secondary">
+                    <i class="fas fa-heart"></i> Infaq & Sedekah
+                </a>
+            </div>
         </div>
     </header>
 
-    <section class="section">
-        <h2>🕋 Jadwal Sholat Hari Ini</h2>
-        <p id="tanggal"></p>
-        <div id="jadwal" class="prayer-grid"></div>
-    </section>
-
-    <section class="section light">
-        <h2>📢 Pengumuman Masjid</h2>
-
-        <div class="accordion">
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    Kajian Ahad Ba’da Subuh
-                    <span>+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>
-                        InsyaAllah akan diadakan kajian rutin setiap Ahad
-                        ba’da sholat Subuh bersama Ustadz Ahmad.
-                    </p>
+    <section id="jadwal" class="section">
+        <div class="container">
+            <div class="prayer-widget">
+                <div class="prayer-header">
+                    <h2>⏰ Jadwal Sholat Hari Ini</h2>
                 </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    Gotong Royong Masjid
-                    <span>+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>
-                        Diharapkan partisipasi jamaah pada hari Minggu
-                        pukul 07.00 WIB untuk kegiatan bersih-bersih masjid.
-                    </p>
+                <div class="time-info">
+                    <div class="live-time">
+                        <h3 id="realtime-clock">00:00:00</h3>
+                        <p id="hari-ini">Memuat hari...</p>
+                    </div>
+                    <div class="date-display">
+                        <p class="gregorian" id="tanggal-masehi">Memuat tanggal...</p>
+                        <p class="hijri" id="tanggal-hijri">Memuat hijriah...</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    Penerimaan Zakat Fitrah
-                    <span>+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>
-                        Panitia zakat menerima zakat fitrah mulai
-                        H-7 Idul Fitri di sekretariat masjid.
-                    </p>
+                <div class="prayer-grid" id="jadwal-container">
+                    <div class="loading" style="grid-column: 1/-1; text-align: center; padding: 20px;">
+                        <i class="fas fa-spinner fa-spin"></i> Memuat jadwal...
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <section class="section">
-        <div class="donasi">
-            <p>Salurkan donasi melalui:</p>
-
-            <div class="donasi-list">
-                <div class="donasi-item">
-                    <img src="assets/images/bca.png" alt="BCA">
-                    <span>1234567890</span>
-                </div>
-                <div class="donasi-item">
-                    <img src="assets/images/gopay.png" alt="GoPay">
-                    <span>08xxxxxxxx</span>
-                </div>
+    <section id="pengumuman" class="section light-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>📢 Pengumuman Terbaru</h2>
+                <p class="section-subtitle">Informasi terkini dari pengurus masjid</p>
             </div>
 
-            <small>A/N Masjid Al-Muslimin</small>
-        </div>
+            <div class="announcement-grid">
+                <div class="announcement-card urgent">
+                    <div class="announcement-header">
+                        <span class="badge">PENTING</span>
+                        <span class="date">15 Jan 2026</span>
+                    </div>
+                    <h3>Gotong Royong Jumat Pagi</h3>
+                    <p>Diharapkan partisipasi seluruh jamaah untuk kegiatan bersih-bersih masjid dan lingkungan setiap
+                        Jumat pagi pukul 07.00 WIB.</p>
+                </div>
 
+                <div class="announcement-card">
+                    <div class="announcement-header">
+                        <span class="badge">Kajian</span>
+                        <span class="date">14 Jan 2026</span>
+                    </div>
+                    <h3>Kajian Rutin Ahad Subuh</h3>
+                    <p>Kajian kitab Riyadhus Shalihin bersama Ustadz Ahmad setiap Ahad ba'da sholat Subuh. Mari
+                        perbanyak ilmu agama.</p>
+                </div>
+
+                <div class="announcement-card">
+                    <div class="announcement-header">
+                        <span class="badge">TPA</span>
+                        <span class="date">12 Jan 2026</span>
+                    </div>
+                    <h3>Pendaftaran TPA 2026</h3>
+                    <p>Pendaftaran TPA Masjid Al-Muslimin tahun 2026 dibuka mulai 20 Januari 2026. Untuk informasi lebih
+                        lanjut hubungi Sekretariat.</p>
+                </div>
+
+                <div class="announcement-card">
+                    <div class="announcement-header">
+                        <span class="badge">Umum</span>
+                        <span class="date">10 Jan 2026</span>
+                    </div>
+                    <h3>Penerimaan Zakat Fitrah</h3>
+                    <p>Panitia zakat fitrah 1447 H akan mulai beroperasi H-7 Ramadhan. Titik pengumpulan di sekretariat
+                        masjid.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="section light">
-        <h2>📍 Lokasi Masjid</h2>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d997.2529529834924!2d104.047436!3d1.152054!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d9890050179309%3A0xec44eacc7e0771da!2sMasjid%20Al%20Muslimin!5e0!3m2!1sid!2sid!4v1769772118725!5m2!1sid!2sid"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ingin Berkontribusi untuk Kemakmuran Masjid?</h2>
+                <p>Bantu pengembangan dan operasional Masjid Al-Muslimin melalui infaq, sedekah, dan wakaf.</p>
+                <div class="cta-buttons">
+                    <a href="kontak-donasi.html" class="btn-primary">
+                        <i class="fas fa-donate"></i> Donasi Sekarang
+                    </a>
+                    <a href="galeri.html" class="btn-secondary">
+                        <i class="fas fa-images"></i> Lihat Kegiatan Kami
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
-        © 2026 Masjid Al-Ikhlas
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Masjid Al-Muslimin</h3>
+                    <p>Perumahan Oriana, Batam</p>
+                    <p>Menjalin Ukhuwah, Menggapai Ridho Allah</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Menu Cepat</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="kontak-donasi.html">Kontak & Donasi</a>
+                    <a href="galeri.html">Galeri</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-phone"></i> (0778) 123456</p>
+                    <p><i class="fas fa-envelope"></i> info@masjidalmuslimin.or.id</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 DKM Masjid Al-Muslimin Oriana. All Rights Reserved.</p>
+                <p>Dikembangkan dengan ❤️ untuk ummat</p>
+            </div>
+        </div>
     </footer>
 
     <script src="assets/js/app.js"></script>

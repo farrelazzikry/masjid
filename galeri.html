@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Masjid Al-Muslimin</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/galeri.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">MASJID <span>AL-MUSLIMIN</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="kontak-donasi.html">Kontak & Donasi</a></li>
+            <li><a href="galeri.html" class="active">Galeri</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="hero-content">
+            <h1>Galeri Kegiatan</h1>
+            <p>Dokumentasi momen-momen kebersamaan di Masjid Al-Muslimin</p>
+        </div>
+    </header>
+
+    <section id="galeri" class="section">
+        <div class="container">
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Semua Kegiatan</button>
+                <button class="filter-btn" data-filter="kajian">Kajian & Pengajian</button>
+                <button class="filter-btn" data-filter="gotong-royong">Gotong Royong</button>
+                <button class="filter-btn" data-filter="sholat">Sholat Berjamaah</button>
+                <button class="filter-btn" data-filter="kegiatan-anak">Kegiatan Anak</button>
+                <button class="filter-btn" data-filter="perayaan">Hari Besar Islam</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Item 1: Kajian -->
+                <div class="gallery-item" data-category="kajian">
+                    <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Kajian Rutin" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Kajian Rutin Ahad Pagi</h4>
+                            <p>Kajian kitab Riyadhus Shalihin bersama Ustadz Ahmad</p>
+                            <span class="gallery-date">15 Januari 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Gotong Royong -->
+                <div class="gallery-item" data-category="gotong-royong">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Gotong Royong" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Gotong Royong Bersih-bersih</h4>
+                            <p>Kegiatan membersihkan lingkungan masjid bersama jamaah</p>
+                            <span class="gallery-date">10 Januari 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Sholat -->
+                <div class="gallery-item" data-category="sholat">
+                    <img src="https://images.unsplash.com/photo-1563738206577-28d3c2fec01a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Sholat Jumat" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Sholat Jumat Berjamaah</h4>
+                            <p>Jamaah memadati masjid untuk sholat Jumat</p>
+                            <span class="gallery-date">8 Januari 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Anak -->
+                <div class="gallery-item" data-category="kegiatan-anak">
+                    <img src="https://images.unsplash.com/photo-1564422167506-9316d35c4c33?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="TPA" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>TPA Masjid Al-Muslimin</h4>
+                            <p>Anak-anak belajar mengaji di TPA masjid</p>
+                            <span class="gallery-date">5 Januari 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: Kajian Malam -->
+                <div class="gallery-item" data-category="kajian">
+                    <img src="https://images.unsplash.com/photo-1544735716-5f8d9e6f8c2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Kajian Malam" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Kajian Malam Jumat</h4>
+                            <p>Kajian khusus ba'da Maghrib setiap Jumat malam</p>
+                            <span class="gallery-date">3 Januari 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6: Perbaikan -->
+                <div class="gallery-item" data-category="gotong-royong">
+                    <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Perbaikan" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Perbaikan Fasilitas Masjid</h4>
+                            <p>Relawan memperbaiki fasilitas masjid bersama-sama</p>
+                            <span class="gallery-date">28 Desember 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7: Idul Fitri -->
+                <div class="gallery-item" data-category="perayaan">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Idul Fitri" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Sholat Idul Fitri 1445 H</h4>
+                            <p>Jamaah sholat Id di lapangan masjid</p>
+                            <span class="gallery-date">10 April 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8: Buka Puasa -->
+                <div class="gallery-item" data-category="perayaan">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Buka Puasa" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Buka Puasa Bersama</h4>
+                            <p>Kegiatan buka puasa bersama setiap hari di bulan Ramadhan</p>
+                            <span class="gallery-date">15 Maret 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 9: Pembagian Zakat -->
+                <div class="gallery-item" data-category="perayaan">
+                    <img src="https://images.unsplash.com/photo-1511984804822-e16ba72fcf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Zakat" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Pembagian Zakat Fitrah</h4>
+                            <p>Panitia zakat menyalurkan zakat kepada mustahik</p>
+                            <span class="gallery-date">9 April 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <button class="btn-secondary" id="loadMore">
+                    <i class="fas fa-plus"></i> Tampilkan Lebih Banyak
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="gallery-modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-nav">
+                <button class="modal-nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="modal-nav-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <span id="modalDate" class="modal-date"></span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Masjid Al-Muslimin</h3>
+                    <p>Perumahan Oriana, Batam</p>
+                    <p>Menjalin Ukhuwah, Menggapai Ridho Allah</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Menu Cepat</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="kontak-donasi.html">Kontak & Donasi</a>
+                    <a href="galeri.html">Galeri</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-phone"></i> (0778) 123456</p>
+                    <p><i class="fas fa-envelope"></i> info@masjidalmuslimin.or.id</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 DKM Masjid Al-Muslimin Oriana. All Rights Reserved.</p>
+                <p>Dikembangkan dengan ❤️ untuk ummat</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/galeri.js"></script>
+</body>
+
+</html>
