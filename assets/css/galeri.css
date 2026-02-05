@@ -129,11 +129,11 @@ body::before {
 .page-hero {
     padding-top: 120px;
     height: auto;
-    min-height: 60vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     background: linear-gradient(rgba(6, 78, 59, 0.8), rgba(6, 78, 59, 0.8)),
-        url('https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1600') center/cover fixed;
+        url('') center/cover fixed;
     display: flex;
     align-items: center;
     justify-content: center;

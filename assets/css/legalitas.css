@@ -1,0 +1,276 @@
+:root {
+    --primary: #064e3b;
+    --secondary: #c4a47c;
+    --bg-light: #fdfbf7;
+    --text-dark: #1f2937;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== LEGALITAS GRID ========== */
+.legalitas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.legalitas-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.legalitas-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(6, 78, 59, 0.15);
+}
+
+/* ========== LEGALITAS IMAGE ========== */
+.legalitas-image {
+    height: 250px;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.legalitas-image i {
+    font-size: 4rem;
+    color: var(--secondary);
+}
+
+/* ========== LEGALITAS CONTENT ========== */
+.legalitas-content {
+    padding: 25px;
+}
+
+.legalitas-content h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.legalitas-content p {
+    color: #64748b;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* ========== LEGALITAS DETAIL ========== */
+.legalitas-detail {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.legalitas-detail h4 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* ========== LEGALITAS INFO ========== */
+.legalitas-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legalitas-info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.legalitas-info-item:last-child {
+    border-bottom: none;
+}
+
+/* ========== LABEL & VALUE ========== */
+.label {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.value {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ========== DOWNLOAD BUTTON ========== */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    margin-top: 15px;
+}
+
+.download-btn:hover {
+    background: #053327;
+    transform: translateY(-2px);
+}
+
+/* ========== LEGALITAS CTA SECTION ========== */
+.legalitas-cta {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background: #f8fafc;
+    border-radius: 15px;
+}
+
+.legalitas-cta h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.legalitas-cta p {
+    color: #64748b;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.legalitas-cta .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary);
+}
+
+.legalitas-cta .btn-primary:hover {
+    background: transparent;
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.legalitas-cta .btn-primary i {
+    font-size: 1rem;
+}
+
+/* ========== HERO SECTION - Pindahkan dari style.css ========== */
+.page-hero {
+    padding-top: 120px;
+    height: auto;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(6, 78, 59, 0.8), rgba(6, 78, 59, 0.8)),
+        url('https://plus.unsplash.com/premium_photo-1733259707122-c8d827ce298f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGVnYWxpdHl8ZW58MHx8MHx8fDA%3D') center/cover fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
+.page-hero .hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.page-hero .hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    .legalitas-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .legalitas-image {
+        height: 200px;
+    }
+
+    .legalitas-image i {
+        font-size: 3rem;
+    }
+
+    .legalitas-content {
+        padding: 20px;
+    }
+
+    .legalitas-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .legalitas-detail {
+        padding: 15px;
+    }
+
+    .page-hero .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .page-hero .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .legalitas-cta {
+        padding: 30px 20px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .legalitas-image {
+        height: 180px;
+    }
+
+    .legalitas-image i {
+        font-size: 2.5rem;
+    }
+
+    .download-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .page-hero .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .page-hero .hero-content p {
+        font-size: 1rem;
+    }
+
+    .legalitas-cta h3 {
+        font-size: 1.3rem;
+    }
+
+    .legalitas-cta p {
+        font-size: 0.95rem;
+    }
+}

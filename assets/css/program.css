@@ -1,0 +1,226 @@
+:root {
+    --primary: #064e3b;
+    --secondary: #c4a47c;
+    --bg-light: #fdfbf7;
+    --text-dark: #1f2937;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== HERO SECTION =========== */
+.page-hero {
+    padding-top: 120px;
+    height: auto;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(6, 78, 59, 0.8), rgba(6, 78, 59, 0.8)),
+        url('https://images.unsplash.com/photo-1732800577634-f2e5c4d43995?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8anVtYXQlMjBiZXJrYWh8ZW58MHx8MHx8fDA%3D') center/cover fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
+.page-hero .hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.page-hero .hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+/* Program Specific Styles */
+.program-detail-section {
+    padding: 80px 0;
+}
+
+.program-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--secondary);
+}
+
+.program-card h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.program-card h2 i {
+    color: var(--secondary);
+}
+
+.program-goal {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px 0;
+    border-left: 4px solid var(--primary);
+}
+
+.program-goal h4 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.program-goal ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.program-goal li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #64748b;
+}
+
+.program-goal li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+/* Financial Table */
+.financial-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.financial-table th {
+    background: var(--primary);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.financial-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.financial-table tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.financial-table tr:hover {
+    background: #f0f9ff;
+}
+
+.debit {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.kredit {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+/* Contact Cards in Program */
+.program-contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.program-contact-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.program-contact-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+    box-shadow: 0 10px 25px rgba(6, 78, 59, 0.1);
+}
+
+.program-contact-card h4 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.program-contact-info {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin: 15px 0;
+    padding: 10px;
+    background: #f8fafc;
+    border-radius: 8px;
+    font-family: monospace;
+}
+
+.program-cta {
+    background: linear-gradient(135deg, var(--primary), #087052);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.program-cta h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.program-cta p {
+    opacity: 0.9;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 480px) {
+    .page-hero .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .page-hero .hero-content p {
+        font-size: 1rem;
+    }
+
+    .legalitas-cta h3 {
+        font-size: 1.3rem;
+    }
+
+    .legalitas-cta p {
+        font-size: 0.95rem;
+    }
+}

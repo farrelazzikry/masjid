@@ -416,6 +416,82 @@ body::before {
     color: #6b7280;
 }
 
+/* Program  */
+.program-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.program-overview-card {
+    background: white;
+    padding: 35px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-top: 5px solid var(--secondary);
+}
+
+.program-overview-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(6, 78, 59, 0.15);
+}
+
+.program-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary), #087052);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.program-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.program-overview-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.program-overview-card p {
+    color: #64748b;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.program-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.program-link:hover {
+    gap: 12px;
+    color: var(--primary);
+}
+
+.program-link i {
+    transition: transform 0.3s;
+}
+
+.program-link:hover i {
+    transform: translateX(5px);
+}
+
 /* ========== SECTION TITLE & SUBTITLE ========== */
 .section-title {
     text-align: center;
@@ -897,5 +973,24 @@ footer {
         padding: 12px 25px;
         font-size: 0.95rem;
         min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        padding: 80px 20px 20px;
+        /* Sesuaikan padding untuk lebih banyak item */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        /* Kurangi margin antar item */
+    }
+
+    .nav-links a {
+        padding: 12px 15px;
+        /* Sesuaikan padding */
+        font-size: 1rem;
+        /* Sedikit lebih kecil */
     }
 }
