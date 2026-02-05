@@ -207,6 +207,13 @@
     margin-right: auto;
 }
 
+.name-contact {
+    font-size: 1rem;
+    color: #374151;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
 @media (max-width: 480px) {
     .page-hero .hero-content h1 {
         font-size: 2.2rem;
